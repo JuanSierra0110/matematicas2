@@ -1,4 +1,7 @@
 # matematicas2
+
+
+
 import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
@@ -911,6 +914,8 @@ print("Gráficamente, esto corresponde a las regiones en el plano (x, y) donde e
 print("Estas regiones están fuera de la hipérbola xy = 5, incluyendo la hipérbola misma. La gráfica 2D muestra estas regiones sombreadas.")
 print("La gráfica 3D muestra la superficie de la función solo para los puntos que cumplen esta condición de dominio.")
 
+
+
 import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1771,74 +1776,6 @@ print("Por lo tanto, no hay restricciones en los valores de x e y para que la fu
 print("El dominio es, por lo tanto, todo el plano R^2.")
 print("La gráfica 2D ilustra esto mostrando el plano completo como la región del dominio.")
 print("La gráfica 3D muestra la superficie de la función (un paraboloide elíptico) sobre todo el plano R^2 dentro del rango de visualización definido.")
-
-import sympy as sp
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
-# 1. Define la función simbólicamente
-x, y = sp.symbols('x y')
-f = 9 - x**2 + y**2
-
-# 2. Calcula el dominio
-# No hay restricciones (raíces cuadradas, denominadores, logaritmos) en la función 9 - x^2 + y^2.
-# Por lo tanto, el dominio es todo R^2.
-dominio_condicion = sp.true # Representa la condición siempre verdadera
-
-# Expresa la condición del dominio
-print("El dominio de la función f(x, y) = 9 - x^2 + y^2 está definido por la condición:")
-print(sp.pretty(dominio_condicion))
-print("\nEsto significa que el dominio es todo el plano R^2.")
-
-# 3. Genera los gráficos
-fig = plt.figure(figsize=(12, 6))
-
-# a) Gráfico 2D del dominio (todo el plano R^2)
-ax1 = fig.add_subplot(121)
-x_vals = np.linspace(-5, 5, 400)
-y_vals = np.linspace(-5, 5, 400)
-X, Y = np.meshgrid(x_vals, y_vals)
-
-# Como el dominio es todo R^2, podemos simplemente mostrar el plano completo.
-# No hay regiones inválidas que sombrear.
-
-ax1.set_title('Dominio en el plano (x, y) (Todo R²)')
-ax1.set_xlabel('x')
-ax1.set_ylabel('y')
-ax1.grid(True)
-ax1.set_aspect('equal', adjustable='box')
-ax1.set_xlim([-5, 5])
-ax1.set_ylim([-5, 5])
-# Opcional: añadir un texto o un sombreado ligero para indicar todo el plano es el dominio
-ax1.text(0, 0, 'Dominio: Todo R²', horizontalalignment='center', verticalalignment='center', fontsize=12, color='gray')
-
-
-# b) Gráfica 3D de la superficie z = f(x, y) en el dominio (todo R^2)
-ax2 = fig.add_subplot(122, projection='3d')
-
-# Calculamos Z para todos los puntos en la malla
-Z_surface = 9 - X**2 + Y**2
-
-surf = ax2.plot_surface(X, Y, Z_surface, cmap='viridis', rstride=20, cstride=20, linewidth=0, antialiased=False)
-
-ax2.set_title('Gráfica 3D de z = f(x, y) = 9 - x^2 + y^2')
-ax2.set_xlabel('x')
-ax2.set_ylabel('y')
-ax2.set_zlabel('z')
-fig.colorbar(surf, shrink=0.5, aspect=5)
-
-plt.tight_layout()
-plt.show()
-
-# 4. Explica el dominio hallado y las restricciones principales.
-print("\nExplicación del Dominio:")
-print("El dominio de la función f(x, y) = 9 - x^2 + y^2 está determinado por las restricciones de sus componentes.")
-print("La resta y suma de cuadrados y constantes (9 - x^2 + y^2) está definida para todos los números reales x e y.")
-print("Por lo tanto, no hay restricciones en los valores de x e y para que la función esté definida.")
-print("El dominio es, por lo tanto, todo el plano R^2.")
-print("La gráfica 2D ilustra esto mostrando el plano completo como la región del dominio.")
-print("La gráfica 3D muestra la superficie de la función (un paraboloide hiperbólico invertido) sobre todo el plano R^2 dentro del rango de visualización definido.")
 
 import sympy as sp
 import numpy as np
@@ -2977,4 +2914,3 @@ print("Por lo tanto, no hay restricciones en los valores de x e y para que la fu
 print("El dominio es, por lo tanto, todo el plano R^2.")
 print("La gráfica 2D ilustra esto mostrando el plano completo como la región del dominio.")
 print("La gráfica 3D muestra la superficie de la función sobre todo el plano R^2 dentro del rango de visualización definido.")
-
