@@ -1,7 +1,5 @@
 # matematicas2
-# Código reconstruido del notebook 'lista_4_matematicas.ipynb'
-# He reunido y ordenado las celdas de código que estaban en el notebook proporcionado.
-# Si necesitas el .ipynb exacto (con outputs/metadata) pásame el archivo .ipynb completo o indícame cómo quieres que lo entregue.
+
 
 from sympy import symbols, sqrt, log, sin
 import numpy as np
